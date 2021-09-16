@@ -3,14 +3,33 @@
         margin-top: 80px;
         margin-left: 20px;
         margin-right: 20px;
-        background-image: url(./img/bg.jpg);
+        /* background-image: url(./img/bg.jpg); */
     }
+
+    .card {
+        border-color:darkgreen;
+
+    }
+}
+
+body {
+    background-image: url(./img/bg1.png);
 }
 
 .head {
     text-align: center;
     margin-top: 100px;
     font-family: 'Ubuntu', sans-serif;
+    /* background-image: url(./img/bg1.png); */
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+.card {
+    border-color:darkgreen;
+    border: 0px;
 }
 
 
@@ -18,8 +37,9 @@
     margin-top: 80px;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: rgb(15, 15, 15);
+    /* background-color: rgb(255, 255, 255); */
 }
+
 
 
 .bid {
@@ -41,9 +61,6 @@
     margin-top: 30px;
 }
 
-.card {
-    border: 30px;
-}
 
 .Bid2 {
     margin-left: 5px;
