@@ -1,3 +1,12 @@
+@media (min-width: 1200px) {
+    #barang {
+        margin-top: 80px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-image: url(./img/bg.jpg);
+    }
+}
+
 .head {
     text-align: center;
     margin-top: 100px;
@@ -9,6 +18,7 @@
     margin-top: 80px;
     margin-left: 20px;
     margin-right: 20px;
+    background-color: rgb(15, 15, 15);
 }
 
 
@@ -18,4 +28,23 @@
 
 .pasangHarga {
     margin-top: 30px;
+}
+
+.nama {
+    margin-bottom: -3px;
+    margin-top: 20px;
+    font-family: 'Mukta', sans-serif;
+}
+
+.label {
+    font-family: 'Mukta', sans-serif;
+    margin-top: 30px;
+}
+
+.card {
+    border: 30px;
+}
+
+.Bid2 {
+    margin-left: 5px;
 }
