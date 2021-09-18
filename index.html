@@ -24,9 +24,32 @@
       <div class="head">
         <div>
           <img src="./img/ceklis.png" alt="" class="float-left logo">
-          <h1>Musholah Thariqussalaam</h1>
+          <h1>Musholla Thoriqussalam</h1>
         </div>
         <h4>Menyelenggarakan Lelang</h4>
+      </div>
+
+        <div class="row inputNama text-center">
+          <div class="col-md-12">
+            <label for="">Nama Anda:</label>
+            <input type="text" placeholder="Silahkan Masukkan Nama Anda" class="inputNamaText">
+          </div>
+        </div>
+
+        <div class="row inputNama text-center">
+          <div class="col-md-12">
+            <label for="">Email Anda:</label>
+            <input type="text" placeholder="Email Anda">
+          </div>
+        </div>
+
+        <div class="row inputNama text-center">
+          <div class="col-md-12">
+            <label for="">No Telp/WA</label>
+            <input type="text" placeholder="Nomor Anda">
+          </div>
+        </div>
+
       </div>
 
       <section id="barang">
@@ -36,7 +59,7 @@
     
             <!-- CADR 1  ===================================================================== -->
             <div class="col-lg-4 col-md-12 mt-5">
-              <div class="card shadow-lg text-dark bg-light mb-3">
+              <div class="card shadow-lg text-dark bg-light mb-3 fly-out-up">
                 <img src="./img/ninja.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">ninja</h5>
@@ -45,57 +68,46 @@
                     vel ipsum ad quo blanditiis ut dolores nemo tempore earum asperiores nulla.
                   </p>
                   <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
                   <div class="row text-center">
                     <div class="col">
                       <h3>Bid Tertinggi</h3>
                     </div>
                   </div>
 
-                  <div class="row text-center">
-                    <div class="col">
-                      <p class="nama">Deris Satrio</p>
-                      <span class="badge bg-success">Rp. 100.000.000</span>
-                    </div>
-                  </div>
+                  <div class="bidding">
 
-                  <div class="row text-center">
-                    <div class="col">
-                      <p class="nama">Rio Fahrizal</p>
-                      <span class="badge bg-dark">Rp. 95.000.000</span>
-                    </div>
                   </div>
+                  
+                  <p class="text-center belumAda">Belum ada</p>
 
-                  <div class="row text-center">
-                    <div class="col">
-                      <p class="nama">Rizky Tamagora</p>
-                      <span class="badge bg-dark">Rp. 70.000.000</span>
-                    </div>
-                  </div>
+                  <form action="javascript:void(0);" class="pasangHarga text-center" method="POST" onsubmit="app.Add()">
+                    <label for="" class="label tawar">MULAI BID</label>
+                    <br>
+                    <span class="badge bg-primary hargaNinja">Rp. 200.000.000</span>
+                    <input type="submit" value="Bid" class="btn btn-secondary Bid2" id="bid1">
+                  </form>
 
-                  <form action="" class="pasangHarga">
-                    <label for="" class="label">Pasang Harga:</label>
+                  <span class="badge bg-warning text-dark mt-5">Bid selanjutnya kelipatan Rp. 500,000</span>
+
+
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.Add()">
+                    <label for="" class="label">Pasang Harga lebih?</label>
                     <div class="row">
                       <div class="col-6">
-                        <input type="text" name="" id="" placeholder="contoh 100.000">
+                        <input type="text" name="" id="input1" placeholder="Contoh: 100.000">
                         
                       </div>
                     </div>
 
                     <div class="row mt-2">
                       <div class="col-6">
-                        <input type="submit" value="Bid" class="btn btn-secondary">
+                        <input type="submit" value="Bid" class="btn btn-secondary bid1Submit" id="bid1">
                       </div>
                     </div>
                   </form>
 
-              
 
-                  <form action="">
-                    <label for="" class="label">Tawar sesuai kelipatan?</label>
-                    <br>
-                    <span class="badge bg-primary">Rp. 200.000.000</span>
-                    <input type="submit" value="Bid" class="btn btn-secondary Bid2">
-                  </form>
                 </div>
               </div>
             </div>
@@ -140,13 +152,20 @@
                       <p class="nama">Rizky Tamagora</p>
                       <span class="badge bg-dark">Rp. 70.000.000</span>
                     </div>
-                  </div>
+                  </div>              
 
-                  <form action="" class="pasangHarga">
-                    <label for="" class="label">Pasang Harga:</label>
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Tawar sesuai kelipatan?</label>
+                    <br>
+                    <span class="badge bg-primary">Rp. 200.000.000</span>
+                    <input type="submit" value="Bid" class="btn btn-secondary Bid2">
+                  </form>
+
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Pasang Harga lebih?</label>
                     <div class="row">
                       <div class="col-6">
-                        <input type="text" name="" id="" placeholder="contoh 100.000">
+                        <input type="text" name="" id="" placeholder="Contoh: 100.000">
                         
                       </div>
                     </div>
@@ -156,15 +175,6 @@
                         <input type="submit" value="Bid" class="btn btn-secondary">
                       </div>
                     </div>
-                  </form>
-
-              
-
-                  <form action="">
-                    <label for="" class="label">Tawar sesuai kelipatan?</label>
-                    <br>
-                    <span class="badge bg-primary">Rp. 200.000.000</span>
-                    <input type="submit" value="Bid" class="btn btn-secondary Bid2">
                   </form>
 
                 </div>
@@ -210,32 +220,32 @@
                       <p class="nama">Rizky Tamagora</p>
                       <span class="badge bg-dark">Rp. 70.000.000</span>
                     </div>
-                  </div>
+                  </div>              
 
-                  <form action="" class="pasangHarga">
-                    <label for="" class="label">Pasang Harga:</label>
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Tawar sesuai kelipatan?</label>
+                    <br>
+                    <span class="badge bg-primary">Rp. 200.000.000</span>
+                    <input type="submit" value="Bid" class="btn btn-secondary">
+                  </form>
+
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Pasang Harga lebih?</label>
                     <div class="row">
                       <div class="col-6">
-                        <input type="text" name="" id="" placeholder="contoh 100.000">
+                        <input type="text" name="" id="" placeholder="Contoh: 100.000">
                         
                       </div>
                     </div>
 
                     <div class="row mt-2">
                       <div class="col-6">
-                        <input type="submit" value="Bid" class="btn btn-dark">
+                        <input type="submit" value="Bid" class="btn btn-secondary">
                       </div>
                     </div>
                   </form>
 
-              
 
-                  <form action="">
-                    <label for="" class="label">Tawar sesuai kelipatan?</label>
-                    <br>
-                    <span class="badge bg-primary">Rp. 200.000.000</span>
-                    <input type="submit" value="Bid" class="btn btn-dark">
-                  </form>
                 </div>
               </div>
             </div>
@@ -282,30 +292,30 @@
                     </div>
                   </div>
 
-                  <form action="" class="pasangHarga">
-                    <label for="" class="label">Pasang Harga:</label>
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Tawar sesuai kelipatan?</label>
+                    <br>
+                    <span class="badge bg-primary">Rp. 200.000.000</span>
+                    <input type="submit" value="Bid" class="btn btn-secondary">
+                  </form>
+
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Pasang Harga lebih?</label>
                     <div class="row">
                       <div class="col-6">
-                        <input type="text" name="" id="" placeholder="contoh 100.000">
+                        <input type="text" name="" id="" placeholder="Contoh: 100.000">
                         
                       </div>
                     </div>
 
                     <div class="row mt-2">
                       <div class="col-6">
-                        <input type="submit" value="Bid" class="btn btn-dark">
+                        <input type="submit" value="Bid" class="btn btn-secondary">
                       </div>
                     </div>
                   </form>
 
-              
 
-                  <form action="">
-                    <label for="" class="label">Tawar sesuai kelipatan?</label>
-                    <br>
-                    <span class="badge bg-primary">Rp. 200.000.000</span>
-                    <input type="submit" value="Bid" class="btn btn-dark">
-                  </form>
                 </div>
               </div>
             </div>
@@ -347,30 +357,29 @@
                     </div>
                   </div>
 
-                  <form action="" class="pasangHarga">
-                    <label for="" class="label">Pasang Harga:</label>
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Tawar sesuai kelipatan?</label>
+                    <br>
+                    <span class="badge bg-primary">Rp. 200.000.000</span>
+                    <input type="submit" value="Bid" class="btn btn-secondary">
+                  </form>
+
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Pasang Harga lebih?</label>
                     <div class="row">
                       <div class="col-6">
-                        <input type="text" name="" id="" placeholder="contoh 100.000">
+                        <input type="text" name="" id="" placeholder="Contoh: 100.000">
                         
                       </div>
                     </div>
 
                     <div class="row mt-2">
                       <div class="col-6">
-                        <input type="submit" value="Bid" class="btn btn-dark">
+                        <input type="submit" value="Bid" class="btn btn-secondary">
                       </div>
                     </div>
                   </form>
 
-              
-
-                  <form action="">
-                    <label for="" class="label">Tawar sesuai kelipatan?</label>
-                    <br>
-                    <span class="badge bg-primary">Rp. 200.000.000</span>
-                    <input type="submit" value="Bid" class="btn btn-dark">
-                  </form>
                 </div>
               </div>
             </div>
@@ -413,30 +422,29 @@
                     </div>
                   </div>
 
-                  <form action="" class="pasangHarga">
-                    <label for="" class="label">Pasang Harga:</label>
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Tawar sesuai kelipatan?</label>
+                    <br>
+                    <span class="badge bg-primary">Rp. 200.000.000</span>
+                    <input type="submit" value="Bid" class="btn btn-secondary">
+                  </form>
+
+                  <form action="javascript:void(0);" class="pasangHarga" method="POST" onsubmit="app.add()">
+                    <label for="" class="label">Pasang Harga lebih?</label>
                     <div class="row">
                       <div class="col-6">
-                        <input type="text" name="" id="" placeholder="contoh 100.000">
+                        <input type="text" name="" id="" placeholder="Contoh: 100.000">
                         
                       </div>
                     </div>
 
                     <div class="row mt-2">
                       <div class="col-6">
-                        <input type="submit" value="Bid" class="btn btn-dark">
+                        <input type="submit" value="Bid" class="btn btn-secondary">
                       </div>
                     </div>
                   </form>
 
-              
-
-                  <form action="">
-                    <label for="" class="label">Tawar sesuai kelipatan?</label>
-                    <br>
-                    <span class="badge bg-primary">Rp. 200.000.000</span>
-                    <input type="submit" value="Bid" class="btn btn-dark">
-                  </form>
                 </div>
               </div>
             </div>
@@ -447,6 +455,7 @@
       </section>
 
     <!-- Optional JavaScript; choose one of the two! -->
+    <script src="./script.js"></script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

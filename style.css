@@ -10,16 +10,26 @@
         border-color:darkgreen;
 
     }
+
+    .inputNama {
+        margin-left: 300px;
+        margin-right: 50px;
+    
+        margin-bottom: -3px;
+        margin-top: 20px;
+        font-family: 'Mukta', sans-serif;
+    }
 }
 
 body {
-    background-image: url(./img/bg1.png);
+    background-color: cornsilk;
 }
 
 .head {
     text-align: center;
     margin-top: 100px;
     font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 40px;
     /* background-image: url(./img/bg1.png); */
 }
 
@@ -47,7 +57,7 @@ body {
 }
 
 .pasangHarga {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .nama {
@@ -64,4 +74,13 @@ body {
 
 .Bid2 {
     margin-left: 5px;
+}
+
+.inputNama {
+    margin-left: 50px;
+    margin-right: 50px;
+
+    margin-bottom: -90px;
+    margin-top: 100px;
+    font-family: 'Mukta', sans-serif;
 }
