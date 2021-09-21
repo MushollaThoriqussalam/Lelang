@@ -165,32 +165,65 @@ let app = new function(){
 
     if (inputNamaValue) {
       nama.push(inputNamaValue)
-    } else {
-      nama.push("Nama Anda Kosong")
-    }
-
-
-    let pasangHarga = document.getElementById('input1')
-    let input1 = pasangHarga.value;
-
-    let result = ""
-    for (let i = 0; i < input1.length; i++) {
-      if (input1[i] !== '.') {
-        result += input1[i]
+      let pasangHarga = document.getElementById('input1')
+      let input1 = pasangHarga.value;
+  
+      let result = ""
+      for (let i = 0; i < input1.length; i++) {
+        if (input1[i] !== '.') {
+          result += input1[i]
+        }
       }
-    }
-    console.log(result);
-    result = Number(result)
-    
-    
+      console.log(result);
+      result = Number(result)
+      
+      if (result < this.bidding[0]) {
+        alert("Bid harus lebih besar dari harga saat ini: Rp. " + this.bidding[0].toLocaleString())
+      } else {
+        if (result) {
+          harga1 = result
+          this.bidding.push(result)
+          result = ''
+          this.FetchAll()
+        }
+      }
+    } else if (!inputNamaValue) {
+      alert('Nama Anda Kosong')
+    } 
 
-    if (result) {
-      harga1 = result
-      this.bidding.push(result)
-      result = ''
-      this.FetchAll()
-    }
+
   };
+
+    this.Add1 = function(){
+    let inputNama = document.querySelector('.inputNamaText')
+    let inputNamaValue = inputNama.value
+
+    if (inputNamaValue) {
+      // let temp = []
+      // let flag = false;
+      // let index = 0
+      // for (let i = 0; i < nama.length; i++) {
+      //   if (inputValueName.toUpperCase() !== nama[i].toUpperCase()) {
+      //     temp.push(nama[i])
+      //   } else {
+      //     flag = true;
+      //     index = i
+      //   }
+      // }
+      nama.push(inputNamaValue)
+
+    if (this.bidding.length === 0) {
+        this.bidding.push(harga1)
+        this.FetchAll()
+      } else {
+        this.bidding.push(this.bidding[0] + kelipatan)
+        this.FetchAll()
+      }
+    } else {
+      alert('Nama Anda Kosong')
+    }
+
+  }
 }
 
 app.FetchAll()
