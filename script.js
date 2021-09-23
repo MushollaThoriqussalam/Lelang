@@ -71,9 +71,11 @@ let app = new function(){
         let tempNama = nama[1]
         nama[1] = nama[2]
         nama[2] = tempNama
-
+        console.log(nama.length, this.bidding.length, "LINE 74");
+        console.log(nama);
+        console.log(this.bidding);
         for (let i = 0; i < this.bidding.length; i++) {
-
+          console.log(nama[i], "LINE 78");
           data += '<div class="row text-center">'
           data += '<div class="col">'
           data += '<p class="nama">' + nama[i].toUpperCase() + '</p>'
@@ -209,8 +211,55 @@ let app = new function(){
       //     flag = true;
       //     index = i
       //   }
-      // }
-      nama.push(inputNamaValue)
+      // }      
+      if (nama.length === 0) {
+        nama.push(inputNamaValue)
+      } else {
+        let tmpName = []
+        let index = 0
+        let flag = false
+        for (let i = 0; i < nama.length; i++) {
+          if (inputNamaValue.toUpperCase() !== nama[i].toUpperCase()) {
+            tmpName.push(nama[i])
+          } else {
+            index = i
+            flag = true;
+          }
+        }
+  
+        if (flag) {
+          tmpName.push(inputNamaValue)
+          nama = tmpName
+        } else {
+          nama.push(inputNamaValue)
+        }
+  
+        console.log(nama);
+  
+  
+        let tmpHarga = []
+        let flagHarga = false
+        for (let i = 0; i < this.bidding.length; i++) {
+          if (i !== index) {
+            tmpHarga.push(this.bidding[i])
+          } else {
+            flagHarga = true;
+          }
+        }
+  
+        if (flagHarga) {
+          tmpHarga.push(this.bidding[0] + kelipatan)
+          this.bidding = tmpHarga
+          this.FetchAll()
+        } else {
+          this.bidding.push(this.bidding[0] + kelipatan)
+          this.FetchAll()
+          console.log(typeof this.bidding[0], "A+JALAN");
+        }
+
+      }
+      
+      // nama.push(inputNamaValue)
 
     if (this.bidding.length === 0) {
         this.bidding.push(harga1)

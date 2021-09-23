@@ -1,5 +1,5 @@
-let array = ["Deris", "Rifki"]
-let angka = [400,300]
+let array = ["Deris", "Rifki", "Agung"]
+let angka = [400,300, 200]
 let result = []
 let nama = "Rifki"
 let index = ""
@@ -12,7 +12,7 @@ for (let i = 0; i < array.length; i++) {
     }
 }
 
-result.unshift(nama)
+result.push(nama)
 let angkaBaru = []
 for (let i = 0; i < angka.length; i++) {
     if (angka[index] !== angka[i]) {
@@ -20,7 +20,7 @@ for (let i = 0; i < angka.length; i++) {
     }
     
 }
-angkaBaru.unshift(500)
+angkaBaru.push(500)
 console.log(angkaBaru);
 // console.log(result);
 // console.log(index);
